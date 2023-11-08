@@ -1,0 +1,114 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    overflow: hidden;
+    background-color:black ;
+}
+section{
+    margin: 0;
+    width: 100%;
+}
+
+.hidden{
+    opacity: 0;
+    transition: all ease-in 2s;
+}
+
+/* Entrer du musee */
+/* Ciel */
+/* pendant le jour */
+/* Soleil */
+.sun{
+	width:1000px;
+	height: 100%;
+	background: transparent url("../images/sky/sun.png") no-repeat;
+	background-size: 1000px ;
+    position: absolute;
+    left: -250px;
+    top: -250px;
+}
+
+.moon{
+	width:1000px;
+	height: 100%;
+	background: transparent url("../images/sky/moon.png") no-repeat;
+	background-size: 1000px ;
+    position: absolute;
+    left: -20px;
+    top: -200px;
+}
+
+.stars:nth-child(1){
+	width:100%;
+	height: 100%;
+	background: transparent url("../images/sky/stars1.png") repeat;
+	background-size: 1000px ;
+    position: absolute;
+    left:0px;
+    top: 0px;
+}
+
+.stars:nth-child(2){
+	width:100%;
+	height: 100%;
+	background: transparent url("../images/sky/stars2.png") ;
+	background-size: 1000px ;
+    position: absolute;
+    left:0px;
+    top: -0px;
+}
+.stars:nth-child(3){
+	width:100%;
+	height: 100%;
+	background: transparent url("../images/sky/stars3.png") no-repeat ;
+	background-size: 1000px ;
+    position: absolute;
+    left:-200px;
+    top:-200px;
+}
+
+
+
+.clouds{
+	width:10000px;
+	height: 100%;
+	background: transparent url("../images/sky/nuage-jour.png") repeat;
+	background-size: 1000px 1000px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 3;
+   -moz-animation:move-clouds 150s linear infinite;
+  -ms-animation:move-clouds 150s linear infinite;
+  -o-animation:move-clouds 150s linear infinite;
+  -webkit-animation:move-clouds 150s linear infinite;
+  animation:move-clouds 150s linear infinite;
+}
+
+.night.clouds{
+	opacity: 0;
+}
+
+
+@keyframes move-clouds {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+
+/* .pendant la nuit */
+/* Lune */
+
+
+/* fin ciel */
+
+
+/* Sol */
+

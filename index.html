@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/fontawesome-free-6.4.0-web/css/all.min.css"> 
+    <link rel="stylesheet" href="css/fonts/boxicons.css">  
+
+   <link rel="stylesheet" href="css/output.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/essai.css">
+   
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="js/app.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinycolor/1.4.1/tinycolor.min.js"defer></script>
+     <title>PortFolio</title>
+</head>
+<body class="relative">
+    <!-- navigateur -->
+    <nav class="fixed top-0 left-0 h-full w-64 px-2 py-4 sidebar close">
+        <header class="relative">
+            <div class="mt-5 flex items-center justify-evenly image-text">
+                <div class="w-10 h-10 rounded-md Mylogo image">
+                    AP
+                </div>
+
+                <div class="font-medium text-base flex flex-col text header-text">
+                    <span class="font-semibold name">Andrianina Portfolio</span>    
+                </div>
+            </div>
+            
+            <i class="cursor-pointer absolute top-1/2 -right-6 text-white flex items-center justify-center text-xl rounded-full -translate-y-1/2 h-6 w-6  bx bxs-chevron-right navtoggle toggle"></i>
+        </header>
+        <div class="flex flex-col justify-evenly menu-bar">
+            <div class="menu">
+                <ul class="relative menu-links">
+                    <li class="menu-indicator">
+                    </li>
+                    <li class="h-12 mt-3 list-none flex items-center nav-link active">
+                        <a href="#acceuil" class="h-full w-full flex items-center rounded-md">
+                            <i class="flex items-center justify-center bx bx-home-circle text-xl menu-icon"></i>
+                            <span class="text nav-text text-sm">Acceuil</span>
+                        </a>
+                    </li>
+                    <li class="h-12 mt-3 list-none flex items-center  nav-link">
+                        <a href="#renseignement" class="h-full w-full flex items-center rounded-md">
+                            <i class="flex items-center justify-center bx bx-info-square text-xl menu-icon"></i>
+                            <span class="text nav-text text-sm">Renseignement</span>
+                        </a>
+                    </li>
+                    <li class="h-12 mt-3 list-none flex items-center  nav-link">
+                        <a href="#competences" class="h-full w-full flex items-center rounded-md">
+                            <i class="flex items-center justify-center bx bx-star text-xl menu-icon"></i>
+                            <span class="text nav-text text-sm">Compétence</span>
+                        </a>
+                    </li>
+                    <li class="h-12 mt-3 list-none flex items-center  nav-link">
+                        <a href="#projects" class="h-full w-full flex items-center rounded-md">
+                            <i class="flex items-center justify-center bx bx-folder text-xl menu-icon"></i>
+                            <span class="text nav-text text-sm">Project</span>
+                        </a>
+                    </li>
+                    <li class="h-12 mt-3 list-none flex items-center  nav-link">
+                        <a href="#parcours" class="h-full w-full flex items-center rounded-md">
+                            <i class="flex items-center justify-center bx bx-compass text-xl menu-icon"></i>
+                            <span class="text nav-text text-sm">Parcours</span>
+                        </a>
+                    </li>
+                    <li class="h-12 mt-3 list-none flex items-center  nav-link">
+                        <a href="#contact" class="h-full w-full flex items-center rounded-md">
+                            <i class="flex items-center justify-center bx bxs-contact text-xl menu-icon"></i>
+                            <span class="text nav-text text-sm">Contact</span>
+                        </a>
+                    </li>
+                
+                </ul>
+
+            </div>
+            <hr>
+            <div class="bottom-content">
+                <li class="h-12 mt-3 list-none gap-2 flex items-center mode">
+                    <div class="relative moon-sun overflow-hidden light">
+                        <div class="absolute w-full h-full top-0 left-0 sun-component">
+                            <img src="images/sun.jpeg" alt="" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute w-full h-full top-0 left-0 moon-component">
+                            <img src="images/moon.jpg" alt="" class="w-full h-full object-cover">
+                        </div>
+                        <div class="cursor-pointer sun" id="moon-sun-img" onclick="modeSwitcher()">
+                        </div>
+                        
+                    </div>
+                    <span class="mode-text text-sm nav-text">Mode</span>
+                </li>
+                <li class="h-12 mt-3 translate-x-4 list-none flex items-center gap-5 theme">
+                   <input type="color" id="stylecolor" class="flex items-center justify-center w-5 h-5 rounded-md border-none bg-transparent cursor-pointer appearance-none">
+                   <span for="stylecolor" class="text-sm nav-text">Theme</span>
+                </li> 
+            </div>
+        </div>     
+    </nav>
+    <!-- fin navigateur -->
+
+<!-- page d'acceuil -->
+
+    <section class=" z-40  relative" id="acceuil">
+        <h3 class="section-Title hidden">Acceuil</h3>
+        <div class="w-11/12 overflow-hidden  mx-auto h-screen flex justify-center align-middle items-center AcceuilSection">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  sm:relative sm:top-0 sm:left-0 sm:translate-x-0 sm:translate-y-0 flex justify-center items-center z-50 h-full md:mx-20 w-full md:w-1/2">
+                <div class=" ">
+                    <h2 class=" text-2xl">Salut, je suis <br> <b class="Myname">Rasoamanana Razafimanantsoa Andrianina</b></h2>
+                    <h3 class=" mb-5">Je suis <span class="font-bold" id="profil"></span></h3>
+                </div>
+            </div>
+          
+            <div class="sm:relative flex items-center -z-10 h-full md:mx-20 w-full md:w-1/2">
+          
+                <img  src="images/profil2.png" alt="Maphoto" 
+                class=" absolute top-1/2 left-1/2 -translate-x-1/3 -translate-y-1/2 min-w-fit min-h-fit" id="photo2"> 
+            </div> 
+        </div>
+    </section>
+<!-- fin de la page d'acceuil -->
+
+    <section class=" z-40 relative mb-5" id="renseignement">
+        <h3 class="section-Title">Renseignement</h3>
+        <div class="mb-20 p-10  mx-auto md:w-full block  md:flex md:justify-evenly profilblock">
+            <div class=" w-full md:w-1/2 flex justify-center items-center">
+                <div class="photodeprofilcontainer relative">
+                    <img src="images/profil1.png" alt="" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ">
+                </div>
+            </div>
+
+            <div class="  w-full md:w-1/2  justify-around items-center">
+                <h4 class="py-5"> Je suis <span class="text-2xl textskin1">Rasoamanana Razafimanantsoa <b class="">Andrianina</b></span></h4>
+                <hr>
+                <div class="px-3 py-5">
+                    <span>Experience</span><span><b>: 1 an </b></span>
+                </div>
+                <div class="px-3 py-5">
+                    <span>Specialite</span><span><b>: Front-end </b></span>
+                </div>
+                <div class="px-3 py-5">
+                    <span>Adresse</span><span><b>: Antananarivo , Madagascar </b></span>
+                </div>
+                <div class="px-3 py-5">
+                    <span>E-mail</span><span><b>: <a href="#">raso4m4ndrianina@gmail.com</a> </b></span>
+                </div>
+                <div class="px-3 py-5">
+                    <span>Telephone</span><span><b>: 034 13 208 74 </b></span>
+                </div>
+                <div class="px-3 py-5">
+                    <span>Niveau d'etude</span><span><b>: License 2 Informatique </b></span>
+                </div>
+                <div class="px-3 py-5">
+                    <span>Freelance</span><span><b>: Libre </b></span>
+                </div>
+
+                <a href="#projects"><button>Voir mes projects</button></a>
+            </div>
+        </div>
+
+        <div class="w-full">
+            <h4 class="text-center font-semibold text-2xl">Mes <span class="textskin1">Services</span> </h4>
+            <div class="block lg:w-3/4 mx-auto pt-10 lg:flex lg:justify-center lg:items-center gap-2">
+                <div class="w-2/3 mx-auto h-52 mb-5 lg:w-1/3 card3d">
+                    <h2 class="text-2xl mb-10">
+                        Développement Web <i class="fa fa-computer"></i>
+                    </h2>
+                    <p>
+                        Je conçois des interfaces utilisateur interactives,
+                         réactives et esthétiquement plaisantes pour améliorer 
+                         l'expérience utilisateur sur les sites web. 
+                    </p>          
+                </div>
+
+                <div class="w-2/3 mx-auto h-52 mb-5 lg:w-1/3 card3d">
+                    <h2 class="text-2xl mb-10">
+                        Software appication <i class="fa fa-computer"></i>
+                    </h2>
+                    <p>
+                      Je peux creer des applications desktop avec Java et C# ce qui me permet 
+                      d'en creer sur multiplatforme
+                    </p>
+                    <br>
+                </div>
+
+                <div class="w-2/3 mx-auto h-52 mb-5 lg:w-1/3 card3d">
+                    <h2 class="text-2xl mb-10">
+                        Designer UI/UX <i class="fa fa-computer"></i>
+                    </h2>
+                    <p>
+                      mes applications suit les regles de designe pour ne pas etre 
+                    </p>
+                    <br>
+                </div>
+            </div>
+        </div>
+     
+   
+    </section>
+
+    <section class=" relative z-40" id="competences">
+        <h3 class="section-Title">Competences</h3>
+        <h4 class="text-center">TECHNOLOGIE</h4>
+
+            <div class="relative technoContainer">
+                 <div class="mt-5 text-white" >
+                    <div class="flex gap-2 justify-center">
+                        <div class="relative circletechno technoitems react">
+                            <i class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 fab fa-react"></i>
+                        </div>
+                        <div class="relative circletechno technoitems laravel">
+                            <i class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 fab fa-laravel"></i>
+                        </div>
+                        <div class="relative circletechno technoitems bootstrap">
+                            <i class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 fab fa-bootstrap"></i>
+                        </div>
+                        <div class="relative circletechno technoitems tailwind">
+                            <i class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bx bxl-tailwind-css"></i>
+                        </div>
+                        <div class="relative circletechno technoitems java ">
+                            <i class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 fab fa-java"></i>
+                        </div>
+                        <div class="relative circletechno technoitems csharp ">
+                            <i class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 fab fa-csharp"></i>
+                        </div>
+                    </div>
+                    <div class="mt-2 flex gap-2 justify-center">
+                        <div class="relative circletechno technoitems cuttlefish">
+                            <i class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 fab fa-cuttlefish"></i>
+                        </div>
+                        <div class="relative circletechno technoitems python">
+                            <i class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 fab fa-python"></i>
+                        </div>
+                        <div class="relative circletechno technoitems php">
+                            <i class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 fab fa-php"></i>
+                        </div>
+                    </div>
+                </div>
+                 <div class="mx-auto w-28 h-28 relative technosun">
+                   
+                    <div class="jsCircle"></div>
+                    <div class="htmlCircle"></div>
+                    <div class="cssCircle"></div>
+            
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-bold text-5xl">
+                        A
+                    </div>
+         
+                    <div class="absolute -left-48 top-16  text-white circletechno">
+                        <i class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 fab fa-js"></i>
+                    </div>
+                    <div class="absolute -right-10 bottom-0  text-white circletechno">
+                        <i class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 fab fa-html5"></i>
+                    </div>
+                    <div class="absolute -left-8 -bottom-16  text-white circletechno">
+                        <i class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 fab fa-css3-alt"></i>
+                    </div>
+                    
+                 </div>
+
+            </div>
+
+            <div class="mx-16 grid mt-32 lg:grid-cols-2 technodetail">
+                <div>
+                    <span>Technologie Web</span>
+                    <div class="my-2 technocompetencecontainer">
+                        <div class="flex gap-2 items-center justify-start">
+                            <div class="relative circletechno text-white html5">
+                                <i class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 fab fa-html5"></i>
+                            </div>
+                            <h5>HTML</h5>
+                        </div>
+                        <div class="my-2 flex justify-center barCompetence" id="html5bar">
+                        </div>
+                    </div>     <div class="my-2 technocompetencecontainer">
+                        <div class="flex gap-2 items-center justify-start">
+                            <div class="relative circletechno text-white css3">
+                                <i class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 fab fa-css3"></i>
+                            </div>
+                            <h5>CSS</h5>
+                        </div>
+                        <div class="my-2 flex justify-center barCompetence" id="css3bar">
+                        </div>
+                    </div>
+                 
+                </div>
+                <div>
+                    <span>Language de programmation</span>
+                    <div class="my-2 technocompetencecontainer">
+                        <div class="flex gap-2 items-center justify-start">
+                            <div class="relative circletechno text-white python">
+                                <i class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 fab fa-python"></i>
+                            </div>
+                            <h5>Python</h5>
+                        </div>
+                        <div class="my-2 flex justify-center barCompetence" id="pythonbar">
+                        </div>
+                    </div>
+                    <div class="my-2 technocompetencecontainer">
+                        <div class="flex gap-2 items-center justify-start">
+                            <div class="relative circletechno text-white java">
+                                <i class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 fab fa-java"></i>
+                            </div>
+                            <h5>JAVA</h5>
+                        </div>
+                        <div class="my-2 flex justify-center barCompetence" id="javabar">
+                        </div>
+                    </div>
+                    <div class="my-2 technocompetencecontainer">
+                        <div class="flex gap-2 items-center justify-start">
+                            <div class="relative circletechno text-white csharp">
+                                <i class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 "></i>
+                            </div>
+                            <h5>C#</h5>
+                        </div>
+                        <div class="my-2 flex justify-center barCompetence" id="csharpbar">
+                        </div>
+                    </div>
+                    <div class="my-2 technocompetencecontainer">
+                        <div class="flex gap-2 items-center justify-start">
+                            <div class="relative circletechno text-white cuttlefish">
+                                <i class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 fab fa-cuttlefish"></i>
+                            </div>
+                            <h5>C</h5>
+                        </div>
+                        <div class="my-2 flex justify-center barCompetence" id="cuttlefishbar">
+                        </div>
+                    </div>
+                    <div class="my-2 technocompetencecontainer">
+                        <div class="flex gap-2 items-center justify-start">
+                            <div class="relative circletechno text-white php">
+                                <i class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 fab fa-php"></i>
+                            </div>
+                            <h5>PHP</h5>
+                        </div>
+                        <div class="my-2 flex justify-center barCompetence" id="phpbar">
+                        </div>
+                    </div>
+                    <div class="my-2 technocompetencecontainer">
+                        <div class="flex gap-2 items-center justify-start">
+                            <div class="relative circletechno text-white javascript">
+                                <i class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 fab fa-js"></i>
+                            </div>
+                            <h5>JavaScript</h5>
+                        </div>
+                        <div class="my-2 flex justify-center barCompetence" id="javascriptbar">
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-10 lg:-mt-60">
+                    <span>Frameworks</span>
+                    <div class="my-2 technocompetencecontainer">
+                        <div class="flex gap-2 items-center justify-start">
+                            <div class="relative circletechno text-white react">
+                                <i class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 fab fa-react"></i>
+                            </div>
+                            <h5>React JS</h5>
+                        </div>
+                        <div class="my-2 flex justify-center barCompetence" id="reactbar">
+                        </div>
+                    </div>
+                    <div class="my-2 technocompetencecontainer">
+                        <div class="flex gap-2 items-center justify-start">
+                            <div class="relative circletechno text-white laravel">
+                                <i class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 fab fa-laravel"></i>
+                            </div>
+                            <h5>Laravel</h5>
+                        </div>
+                        <div class="my-2 flex justify-center barCompetence" id="laravelbar">
+                        </div>
+                    </div>
+                    <div class="my-2 technocompetencecontainer">
+                        <div class="flex gap-2 items-center justify-start">
+                            <div class="relative circletechno text-white bootstrap">
+                                <i class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 fab fa-bootstrap"></i>
+                            </div>
+                            <h5>Bootstrap CSS</h5>
+                        </div>
+                        <div class="my-2 flex justify-center barCompetence" id="bootstrapbar">
+                        </div>
+                    </div>
+                    <div class="my-2 technocompetencecontainer">
+                        <div class="flex gap-2 items-center justify-start">
+                            <div class="relative circletechno text-white tailwind">
+                                <i class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  bx bxl-tailwind-css"></i>
+                            </div>
+                            <h5>Tailwind CSS</h5>
+                        </div>
+                        <div class="my-2 flex justify-center barCompetence" id="tailwindbar">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+      
+        <h4 class="text-center">INFORMATIQUE BUREAUTIQUE</h4>
+
+        <div class="w-10/12 mx-auto my-10  grid grid-cols-2 md:grid-cols-4 bureautique ">
+            <div class="mb-5 flex justify-center items-center">
+                <div>
+                    <div class="flex gap-3 items-center">
+                        <i class="text-green-500 fa fa-file-excel"></i>
+                        <span>EXCEL</span>
+                    </div>
+                    <div class="flex gap-2 justify-center countbureautique" id="excelcount">
+                        <div bac></div><div></div><div></div><div></div><div></div>
+                    </div>
+                </div>
+            </div>
+       
+            <div class="mb-5 flex justify-center items-center">
+                <div>
+                    <div class="flex gap-3 items-center">
+                        <i class="text-blue-500 fa fa-file-word"></i>
+                        <span>WORD</span>
+                    </div>
+                    <div class="flex gap-2 justify-center countbureautique" id="wordcount">
+                        <div></div><div></div><div></div><div></div><div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-5 flex justify-center items-center">
+                <div>
+                <div class="flex gap-3 items-center">
+                    <i class="text-red-500 fa fa-file-powerpoint"></i>
+                    <span>POWER POINT</span>
+                </div>
+                <div class="flex gap-2 justify-center countbureautique" id="powerpointcount">
+                    <div></div><div></div><div></div><div></div><div></div>
+                </div>
+                </div>
+            </div>
+            <div class="mb-5 flex justify-center items-center">
+                <div>
+                <div class="flex gap-3 items-center">
+                    <i class="text-purple-500 fa fa-keyboard"></i>
+                    <span>Dactylographie</span>
+                </div>
+                <div class="flex gap-2 justify-center countbureautique" id="dactylocount">
+                    <div></div><div></div><div></div><div></div><div></div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <h4 class="text-center">LANGUE</h4>
+        <div class="w-7/12 mx-auto my-10  grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4">
+            <div class="malagasy">
+                <h6 class="text-center my-5">Malagasy</h6>
+                <div class=" flex justify-center gap-3">
+                    <div>
+                        <div class="flex justify-center">
+                            <div class="barlangue parler"></div>
+                        </div>
+                        <span>Parler</span>
+                    </div>
+                    <div>
+                        <div class="flex justify-center">
+                            <div class="barlangue ecrire"></div>
+                        </div>
+                        <span>Ecrire</span>
+                    </div>
+                    <div>
+                        <div class="flex justify-center">
+                            <div class="barlangue ecoute"></div>
+                        </div>
+                        <span>Ecoute</span>
+                    </div>
+                </div>
+            </div>
+            <div class="francais">
+                <h6 class="text-center my-5">Francais</h6>
+                <div class="flex  justify-center gap-3">
+                    <div>
+                        <div class="flex justify-center">
+                            <div class="barlangue parler"></div>
+                        </div>
+                        <span>Parler</span>
+                    </div>
+                    <div>
+                        <div class="flex justify-center">
+                            <div class="barlangue ecrire"></div>
+                        </div>
+                        <span>Ecrire</span>
+                    </div>
+                    <div>
+                        <div class="flex justify-center">
+                            <div class="barlangue ecoute"></div>
+                        </div>
+                        <span>Ecoute</span>
+                    </div>
+                </div>
+            </div>
+            <div class="anglais">
+                <h6 class="text-center my-5">Anglais</h6>
+                <div class="flex  justify-center gap-3">
+                    <div>
+                        <div class="flex justify-center">
+                            <div class="barlangue parler"></div>
+                        </div>
+                        <span>Parler</span>
+                    </div>
+                    <div>
+                        <div class="flex justify-center">
+                            <div class="barlangue ecrire"></div>
+                        </div>
+                        <span>Ecrire</span>
+                    </div>
+                    <div>
+                        <div class="flex justify-center">
+                            <div class="barlangue ecoute"></div>
+                        </div>
+                        <span>Ecoute</span>
+                    </div>
+                </div>
+            </div>
+            <div class="allemand">
+                <h6 class="text-center my-5">Allemand</h6>
+                <div class="flex  justify-center gap-3">
+                    <div>
+                        <div class="flex justify-center">
+                            <div class="barlangue parler"></div>
+                        </div>
+                        <span>Parler</span>
+                    </div>
+                    <div>
+                        <div class="flex justify-center">
+                            <div class="barlangue ecrire"></div>
+                        </div>
+                        <span>Ecrire</span>
+                    </div>
+                    <div>
+                        <div class="flex justify-center">
+                            <div class="barlangue ecoute"></div>
+                        </div>
+                        <span>Ecoute</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class=" relative" id="projects">
+        <h3 class="section-Title">Mes Projects</h3>
+        <div class="w-11/12 my-10 mx-auto grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-4 gap-5">
+            <div class="relative h-96">
+                <img src="images/project-image/portfolio.png" alt="" class="w-full h-full project-img">
+                <h4 class="absolute right-2 bottom-0 font-extrabold">Portfolio</h4>
+            </div>
+            <div class="relative h-96">
+                <img src="images/project-image/pubnex2.0.png" alt="" class="w-full h-full project-img">
+                <h4 class="absolute right-2 bottom-0 font-extrabold">PubNex 2.0</h4>
+            </div>
+            <div class="relative h-96">
+                <img src="images/project-image/pubnex1.0.png" alt="" class="w-full h-full project-img">
+                <h4 class="absolute right-2 bottom-0 font-extrabold">PubNex 1.0</h4>
+            </div>
+           <!--  <div class="relative h-96">
+                <img src="images/project-image/portfolio.png" alt="" class="w-full h-full project-img">
+                <h4 class="absolute right-2 bottom-0 font-extrabold">Location de voiture</h4>
+            </div>
+            <div class="relative h-96">
+                <img src="images/project-image/portfolio.png" alt="" class="w-full h-full project-img">
+                <h4 class="absolute right-2 bottom-0 font-extrabold">Location de voiture</h4>
+            </div>
+            <div class="relative h-96">
+                <img src="images/project-image/portfolio.png" alt="" class="w-full h-full project-img">
+                <h4 class="absolute right-2 bottom-0 font-extrabold">Frais Scrolarite</h4>
+            </div> -->
+        </div>
+    </section>
+
+    <section class="relative" id="parcours">
+        <h3 class="section-Title">Mon Parcours</h3>
+        <div id="container">
+            <div id="thumbs">
+                <div class="history-block bg-66">
+                <div class="cover"></div>
+                <div class="year">2021-2022</div>
+                <div class="title"><b class="text-3xl">Licence 1 </b><br><br><br><span>DA2I Emit Fianarantsoa</span> </div>
+                </div>
+
+                <div class="history-block bg-66">
+                    <div class="cover"></div>
+                    <div class="year">2022-2023</div>
+                    <div class="title"><b class="text-3xl">Licence 2 </b><br><br><br><span>DA2I Emit Fianarantsoa</span> </div>
+                </div>
+
+                <div class="history-block bg-66">
+                    <div class="cover"></div>
+                    <div class="year">19 Juin 2023 - 19 Aout 2023</div>
+                    <div class="title"><b class="text-3xl">Stage en Informatique </b><br><br><br><span>Ministere de l'Energie et des Hydrocarbures</span><br>M.E.H </div>
+                </div>
+
+                <div class="history-block bg-66">
+                    <div class="cover"></div>
+                    <div class="year">1 Octobre a nos jours</div>
+                    <div class="title"><b class="text-3xl">Stage en Informatique </b><br><br><br><span>Ministere de l'Energie et des Hydrocarbures</span><br>M.E.H </div>
+                    </div>
+            </div>
+         
+        </div>   
+    </section>
+
+    <section class=" relative" id="contact">
+        <h3 class="section-Title">Contact</h3>
+        <form action="">
+            <div class=" w-11/12 md:w-1/2 mx-auto contactcontainer">
+                <div class=" mb-5 input-field">
+                    <div class="flex justify-between items-center">
+                        <div class="w-1/12 icon-field">
+                            @
+                        </div>
+                        <div class="w-11/12">
+                            <input type="text" class="w-full h-full bg-none" placeholder="Votre Nom">
+                        </div>
+                    </div>
+                </div>
+                <div class=" mb-5 input-field">
+                    <div class="flex justify-between items-center">
+                        <div class="w-1/12 icon-field">
+                           <i class="bx bx-envelope"></i>
+                        </div>
+                        <div class="w-11/12">
+                            <input type="email" class="w-full h-full bg-none" placeholder="Votre Adresse E-mail">
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="mb-5 input-field">
+                    <div class="flex justify-between items-center">
+                        <div class="w-1/12 icon-field textareafield">
+                          P
+                        </div>
+                        <div class="w-11/12">
+                          <Textarea placeholder="Votre message" class="w-full min-h-fit h-44" ></Textarea>
+                        </div>
+                    </div>
+                </div>
+    
+    
+            </div>
+            <div class="flex justify-center">
+                <button class="py-2 px-4">Envoyer</button>    
+            </div>
+            
+        </form>
+  
+
+        <h4 class="mt-5 text-center font-semibold text-2xl">Mes <span class="textskin1">Reseau sociaux</span> </h4>
+     
+        <div class="min-h-screen mt-20 flex w-full gap-5 justify-center items-center reseau_social">
+     
+           
+  
+            <div class="cube" id="github">
+                <a href="#github">
+                    <div>
+                        <span style="--i:0;"> <i class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-9xl bx bxl-github"></i>
+                        </span>
+                        <span style="--i:1;"> <i class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-9xl bx bxl-github"></i></span>
+                        <span style="--i:2;"> <i class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-9xl bx bxl-github"></i></span>
+                        <span style="--i:3;"> <i class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-9xl bx bxl-github"></i></span>
+                        <span class="top"></span>
+                    </div>
+                </a>
+            
+            </div>
+
+            <div class="cube" id="facebook">
+                <a href="#facebook">
+                    <div>
+                        <span style="--i:0;"> <i class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-9xl bx bxl-facebook"></i>
+                        </span>
+                        <span style="--i:1;"> <i class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-9xl bx bxl-facebook"></i></span>
+                        <span style="--i:2;"> <i class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-9xl bx bxl-facebook"></i></span>
+                        <span style="--i:3;"> <i class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-9xl bx bxl-facebook"></i></span>
+                        <span class="top"></span>
+                    </div>
+                </a>
+             
+            </div>
+
+            <div class="cube" id="linkedin">
+                <a href="#linkedin">
+                    <div>
+                        <span style="--i:0;"> <i class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-9xl bx bxl-linkedin"></i>
+                        </span>
+                        <span style="--i:1;"> <i class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-9xl bx bxl-linkedin"></i></span>
+                        <span style="--i:2;"> <i class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-9xl bx bxl-linkedin"></i></span>
+                        <span style="--i:3;"> <i class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-9xl bx bxl-linkedin"></i></span>
+                        <span class="top"></span>
+                    </div>
+                </a> 
+                
+            </div>
+
+            <div class="cube" id="instagram">
+                <a href="#instagram">
+                    <div>
+                        <span style="--i:0;"> <i class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-9xl bx bxl-instagram"></i>
+                        </span>
+                        <span style="--i:1;"> <i class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-9xl bx bxl-instagram"></i></span>
+                        <span style="--i:2;"> <i class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-9xl bx bxl-instagram"></i></span>
+                        <span style="--i:3;"> <i class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-9xl bx bxl-instagram"></i></span>
+                        <span class="top"></span>
+                    </div>
+                </a>
+              
+            </div>
+
+            <div class="cube" id="google">
+                <a href="#google">
+                    <div>
+                        <span style="--i:0;"> <i class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-9xl bx bxl-google"></i>
+                        </span>
+                        <span style="--i:1;"> <i class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-9xl bx bxl-google"></i></span>
+                        <span style="--i:2;"> <i class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-9xl bx bxl-google"></i></span>
+                        <span style="--i:3;"> <i class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-9xl bx bxl-google"></i></span>
+                        <span class="top"></span>
+                    </div>
+                </a>
+           
+            </div>
+
+          
+          <!--   
+            
+
+            <div class="social3dmediabox" id="Linkedin">
+                <div class="social3dmediaboxborder">
+                    <i class="absolute bottom-0 left-1/2 text-5xl bx bxl-linkedin"></i>
+                </div>
+            </div>
+
+            <div class="social3dmediabox" id="instagram">
+                <div class="social3dmediaboxborder">
+                    <i class="absolute bottom-0 left-1/2 text-5xl bx bxl-instagram"></i>
+                </div>
+            </div>
+
+            <div class="social3dmediabox" id="google">
+                <div class="social3dmediaboxborder">
+                    <i class="absolute bottom-0 left-1/2 text-5xl bx bxl-google"></i>
+                </div>
+            </div>
+
+            <div class="social3dmediabox" id="github">
+                <div class="social3dmediaboxborder">
+                    <i class="absolute bottom-0 left-1/2 text-5xl bx bxl-github"></i>
+                </div>
+            </div>
+ -->        </div>
+    </section>  
+    
+    
+    <footer class="relative  h-20 flex flex-col items-center justify-center">
+        @ Rasoamanana Razafimanantsoa Andrianina <br>
+        <i class="bx bx-copyright"> Andrianina 2023</i>
+    </footer>
+    
+</body>
+</html>
