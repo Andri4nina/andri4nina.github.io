@@ -1046,6 +1046,8 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+/*npx tailwindcss -i ./css/style.css -o ./css/output.css --watch  */
+
 html{
   scroll-behavior: smooth;
 }
@@ -1137,7 +1139,7 @@ body.dark::before{
   width: 100%;
   min-height:100vh;
   position: fixed;
-  transform: translateX(-50%);
+  transform: translateX(-49%);
   top: 0;
   left: 0;
   z-index: 0;
@@ -1149,7 +1151,7 @@ body.dark::after{
   width: 100%;
   min-height:100vh;
   position: fixed;
-  transform: translateX(50%);
+  transform: translateX(49%);
   top: 0;
   left: 0;
   z-index: 0;
@@ -1183,7 +1185,7 @@ body.dark::after{
 }
 
 .sidebar.close .image-text{
-  transform: translateX(80px);
+  transform: translateX(5px);
 }
 
 .sidebar .Mylogo{
@@ -1976,7 +1978,43 @@ button:hover::before{
 
 .barCompetence#reactbar::before{
   background-color:  black;
-  width: 14%;
+  width: 54%;
+}
+
+.technocompetencecontainer .angular:hover{
+  background-color: rgb(0, 0, 0);
+  color:  rgb(210, 41, 41);
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 5px 5px 20px black;
+}
+
+.barCompetence#angularbar::before{
+  background-color:  red;
+  width: 24%;
+}
+
+.technocompetencecontainer .nest:hover{
+  background-color: rgb(0, 0, 0);
+  color:  rgb(207, 210, 41);
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 5px 5px 20px black;
+}
+
+.barCompetence#nestbar::before{
+  background-color:  rgb(207, 210, 41);
+  width: 34%;
+}
+
+.technocompetencecontainer .three:hover{
+  background-color: rgb(255, 255, 255);
+  color:  rgb(0, 0, 0);
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 5px 5px 20px black;
+}
+
+.barCompetence#threebar::before{
+  background-color:  rgb(255, 255, 255);
+  width: 54%;
 }
 
 .technocompetencecontainer .laravel:hover{
@@ -1988,7 +2026,7 @@ button:hover::before{
 
 .barCompetence#laravelbar::before{
   background-color:   rgb(228, 42, 42);
-  width: 34%;
+  width: 50%;
 }
 
 .technocompetencecontainer .bootstrap:hover{
@@ -2000,7 +2038,7 @@ button:hover::before{
 
 .barCompetence#bootstrapbar::before{
   background-color:   rgb(166, 42, 228);
-  width: 58%;
+  width: 68%;
 }
 
 .technocompetencecontainer .tailwind:hover{
@@ -2012,7 +2050,7 @@ button:hover::before{
 
 .barCompetence#tailwindbar::before{
   background-color:  rgb(0, 162, 255);
-  width: 51%;
+  width: 70%;
 }
 
 .countbureautique div{

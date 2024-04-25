@@ -210,7 +210,7 @@ navtoggler.addEventListener('click',()=>{
 
 /* typing pour mon profil */    
 const profilElement = document.getElementById('profil');
-const list = ['Développeur web','Designer UI/UX', 'Adepte de la programmation', ''];
+const list = ['Développeur web','Designer UI/UX', 'Programmeur', 'Concepteur 3D' , ''];
 
 let index = 0;
 let subIndex = 0;
